@@ -1,0 +1,17 @@
+[Unit]
+Description=Cybertarr AI Kernel Orchestration Layer (AKOL)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/cybertarr-akol
+ExecStart=/bin/bash /opt/cybertarr-akol/scripts/run.sh
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=cybertarr
+
+[Install]
+WantedBy=multi-user.target

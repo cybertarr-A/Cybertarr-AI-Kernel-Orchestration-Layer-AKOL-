@@ -1,0 +1,22 @@
+[
+  {
+    "directory": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/ebpf",
+    "command": "clang -O2 -g -Wall -target bpf -I/usr/include/x86_64-linux-gnu -c spike_kern.c -o spike_kern.o",
+    "file": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/ebpf/spike_kern.c"
+  },
+  {
+    "directory": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/daemon",
+    "command": "gcc -O2 -g -Wall -I/usr/include/bpf -c spike_user.c -o spike_user.o",
+    "file": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/daemon/spike_user.c"
+  },
+  {
+    "directory": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/daemon",
+    "command": "gcc -O2 -g -Wall -c controller.c -o controller.o",
+    "file": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/daemon/controller.c"
+  },
+  {
+    "directory": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/daemon",
+    "command": "gcc -O2 -g -Wall -c scheduler.c -o scheduler.o",
+    "file": "/home/cyber/Cybertarr AI Kernel Orchestration Layer (AKOL)/cybertarr-akol/daemon/scheduler.c"
+  }
+]

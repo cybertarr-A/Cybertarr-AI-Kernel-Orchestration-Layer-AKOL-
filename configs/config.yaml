@@ -1,0 +1,39 @@
+# Cybertarr AKOL OS Engine V2 Configuration
+
+# PID CONTROLLER PARAMETERS (C Daemon)
+pid_controller:
+  kp: 0.5
+  ki: 0.1
+  kd: 0.2
+
+# RL SCHEDULER PARAMETERS (Python AI Engine)
+rl_engine:
+  alpha: 0.05       # Learning rate
+  gamma: 0.9        # Discount factor
+  epsilon: 0.1      # Exploration rate
+  save_path: "/tmp/rl_qtable.npy"
+
+# THRESHOLDS & FAILSAFE
+thresholds:
+  spike_detection_ns: 20000000 
+  max_priority_score: 0.95     
+  cgroup_cpu_max: 20000        
+  system_load_failsafe: 4.0    # Load average above this triggers failsafe
+  isolate_core_id: -1          # -1 = dynamically find last core
+
+# WHITELIST
+whitelist:
+  - "systemd"
+  - "kworker"
+  - "sshd"
+  - "zsh"
+  - "bash"
+  - "tmux"
+
+# CONTROLLER
+controller:
+  poll_interval_ms: 100       
+  stats_socket_path: "/tmp/akol_stats.sock"
+  ai_socket_path: "/tmp/akol_ai.sock"
+  log_level: "INFO"
+
