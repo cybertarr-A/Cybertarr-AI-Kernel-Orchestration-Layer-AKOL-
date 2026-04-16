@@ -1,3 +1,4 @@
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/d82eae73-a11c-4214-9e05-ccc46e077440" />
 # Cybertarr AI Kernel Orchestration Layer (AKOL)
 
 An intelligent layer acting on top of Linux to dynamically observe CPU behavior via eBPF, detect spikes, and orchestrate CPU allocation using cgroups and priority logic driven by a contextual AI predictive model.
